@@ -1,11 +1,11 @@
 def rgb(r, g, b)
-	[r, g, b].map do |x| 
+	[r, g, b].inject("") do |accum, x| 
 
 		x = 0 if x.negative?
 		x = 255 if x > 255
-		(x.to_s(16) * 2).slice(0..1) 
+		accum << (x.to_s(16) * 2).slice(0..1).upcase
 
-	end.reduce(:+).upcase
+	end
 end
 
 binding.irb
