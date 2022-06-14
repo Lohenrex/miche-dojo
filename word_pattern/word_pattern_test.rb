@@ -13,6 +13,10 @@ class WordPatternTest < Minitest::Test
     assert_equal word_pattern('aaaa', 'cat cat dog cat'), false
   end
   
+  def test_with_a_two_different_letter_pattern_and_one_different_word
+    assert_equal word_pattern('aabb', 'pangolin pangolin pangolin pangolin'), false
+  end
+  
   def test_with_a_four_different_letter_pattern_and_four_different_words
     assert_equal word_pattern('abbccd', 'aram zam zam arafi arafi guli'), true
   end

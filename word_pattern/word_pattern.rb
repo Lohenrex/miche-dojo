@@ -10,5 +10,7 @@ def word_pattern(pattern, string)
     resulting_pattern << pattern[i] if word_pattern_map.fetch(pattern[i]) == word
   end
 
+  return false unless word_pattern_map.values.length == word_pattern_map.values.uniq.length
+
   pattern == resulting_pattern.join('')
 end
