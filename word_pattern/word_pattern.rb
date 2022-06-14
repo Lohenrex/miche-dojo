@@ -5,12 +5,12 @@ def word_pattern(pattern, string)
 
   raise StandardError.new "Pattern and phrase length are not equal" if pattern.length != word_array.length
 
+  return false unless pattern.chars.uniq.length == word_array.uniq.length
+
   word_array.each_with_index do |word, i|
     word_pattern_map.store(pattern[i], word) if !word_pattern_map.key? pattern[i]
     resulting_pattern << pattern[i] if word_pattern_map.fetch(pattern[i]) == word
   end
-
-  return false unless word_pattern_map.values.length == word_pattern_map.values.uniq.length
 
   pattern == resulting_pattern.join('')
 end
