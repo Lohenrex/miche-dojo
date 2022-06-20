@@ -14,11 +14,22 @@ class PigLatinTest < Minitest::Test
     assert_equal @pig_latin.pig_it('Pig latin is cool'), 'igPay atinlay siay oolcay'
   end
 
+  # Considering cases with symbols between words that should not be altered
   def test_a_phrase_with_multiple_symbols
     assert_equal @pig_latin.pig_it("Hey, don't do this!"), "eyHay, on'tday oday histay!"
   end
 
+  # Considering cases with isolated symbols
   def test_a_phrase_with_an_isolated_symbol
     assert_equal @pig_latin.pig_it('Quis custodiet ipsos custodes ?'), 'uisQay ustodietcay psosiay ustodescay ?'
   end
+
+  def test_another_phrase_with_isolated_symbols
+    assert_equal @pig_latin.pig_it('a . Bias di'), 'aay . iasBay iday'
+  end
+
+  def test_a_phrase_with_isolated_letters
+    assert_equal @pig_latin.pig_it('A b C d E'), 'Aay bay Cay day Eay'
+  end
+
 end
