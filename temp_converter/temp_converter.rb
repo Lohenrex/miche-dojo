@@ -60,17 +60,3 @@ class Kelvin
 		temp - 273.15
 	end
 end
-
-binding.irb
-
-# Tests
-TempConverter.new(0, input_scale: 'celsius', output_scale: 'kelvin').convert_temp
-TempConverter.new(0, input_scale: 'celsius', output_scale: 'fahrenheit').convert_temp
-
-TempConverter.new(0, input_scale: 'fahrenheit', output_scale: 'celsius').convert_temp
-TempConverter.new(0, input_scale: 'fahrenheit', output_scale: 'kelvin').convert_temp
-
-TempConverter.new(0, input_scale: 'kelvin', output_scale: 'celsius').convert_temp
-TempConverter.new(0, input_scale: 'kelvin', output_scale: 'fahrenheit').convert_temp
-
-
