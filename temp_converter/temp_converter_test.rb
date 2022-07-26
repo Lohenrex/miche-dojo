@@ -6,7 +6,6 @@ require_relative 'temp_converter'
 
 # Test file for the temp_converter.rb file
 class TempConverterTest < Minitest::Test
-
   def test_conversion_from_celsius_to_kelvin
     @converter = TempConverter.new(0, input_scale: 'celsius', output_scale: 'kelvin')
     assert_in_delta @converter.convert_temp, 273.15, 0.01

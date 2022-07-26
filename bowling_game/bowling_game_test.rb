@@ -11,10 +11,10 @@ class BowlingGameTest < Minitest::Test
   end
 
   def test_the_right_bonus_for_a_spare
-    assert_equal @game.spare, "something"
+    assert_equal @game.spare, 'something'
   end
 
   def test_the_right_bonus_for_a_strike
-    assert_equal @game.strike, "something"
+    assert_equal @game.strike, 'something'
   end
 end

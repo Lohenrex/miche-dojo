@@ -31,5 +31,4 @@ class PigLatinTest < Minitest::Test
   def test_a_phrase_with_isolated_letters
     assert_equal @pig_latin.pig_it('A b C d E'), 'Aay bay Cay day Eay'
   end
-
 end
