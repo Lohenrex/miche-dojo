@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Class for extracting ids from a hash
 class IdExtractor
   attr_reader :input, :output
 
@@ -12,7 +13,7 @@ class IdExtractor
     raise StandardError, 'This $|-|!T is not a hash!' unless input.is_a? Hash
 
     extract_ids
-    output
+    output.sort
   end
 
   def process_items_array(items_array)
