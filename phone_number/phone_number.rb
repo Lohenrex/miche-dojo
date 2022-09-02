@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Formats input into the correct output. In this case, a phone number
 class Formatter
   def phone_number(numbers)
     run_validations(numbers)
