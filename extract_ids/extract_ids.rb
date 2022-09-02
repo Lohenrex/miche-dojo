@@ -16,6 +16,8 @@ class IdExtractor
     output.sort
   end
 
+  private
+
   def process_items_array(items_array)
     partial = []
     partial_ary = []

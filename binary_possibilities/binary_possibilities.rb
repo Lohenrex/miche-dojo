@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class BinaryPossibilities
-  OPTIONS = %w[1 0]
+  OPTIONS = %w[1 0].freeze
 
   def initialize(input)
     @input = input
@@ -12,6 +14,6 @@ class BinaryPossibilities
   private
 
   def output_size
-    OPTIONS.size ** @input.count("?")
+    OPTIONS.size**@input.count('?')
   end
 end
